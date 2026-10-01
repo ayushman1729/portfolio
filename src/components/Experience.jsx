@@ -15,7 +15,7 @@ export default function Experience() {
           <div className="flex items-center justify-between border-b border-zinc-200/80 dark:border-zinc-800 pb-6 mb-8">
             <div>
               <div className="text-xs font-mono tracking-widest text-red-500 uppercase font-semibold mb-1 flex items-center gap-2">
-                <span>01 // PRODUCTION WORK</span>
+                <span>02 // PRODUCTION WORK</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-950 dark:text-white">
                 Work Experience

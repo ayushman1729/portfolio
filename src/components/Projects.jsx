@@ -31,7 +31,7 @@ export default function Projects() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200/80 dark:border-zinc-800 pb-6 mb-8">
             <div>
               <div className="text-xs font-mono tracking-widest text-red-500 uppercase font-semibold mb-1 flex items-center gap-2">
-                <span>02 // FEATURED SYSTEMS</span>
+                <span>03 // FEATURED ARCHITECTURES</span>
                 <span className="text-[10px] text-slate-400 font-normal">({projects.length} PROJECTS)</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">

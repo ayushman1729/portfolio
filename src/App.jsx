@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import SystemDemos from './components/SystemDemos';
 import WhyHireMe from './components/WhyHireMe';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -31,7 +32,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-[#080a0f] text-slate-800 dark:text-slate-100 flex flex-col font-['Plus_Jakarta_Sans',sans-serif] selection:bg-red-500 selection:text-white transition-colors duration-200">
       
-      {/* Seamless Sticky Header */}
+      {/* Header naturally in document flow (scrolls away on page scroll) */}
       <Navbar
         onOpenResume={() => setIsResumeOpen(true)}
         isDark={isDark}
@@ -39,11 +40,12 @@ export default function App() {
       />
       
       {/* Main Content */}
-      <main className="flex-1 pt-8 sm:pt-12 space-y-12 sm:space-y-16">
+      <main className="flex-1 pt-6 sm:pt-8 space-y-10 sm:space-y-14">
         <Hero
           onOpenResume={() => setIsResumeOpen(true)}
           isDark={isDark}
         />
+        <SystemDemos isDark={isDark} />
         <WhyHireMe />
         <Experience />
         <Projects />

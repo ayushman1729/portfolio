@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, FileText, Sun, Moon } from 'lucide-react';
+import { Menu, X, ArrowUpRight, FileText, Sun, Moon, Mail } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Navbar({ onOpenResume, isDark, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [time, setTime] = useState('');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     const updateTime = () => {
@@ -41,46 +33,40 @@ export default function Navbar({ onOpenResume, isDark, toggleTheme }) {
   ];
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-200 ${
-        scrolled
-          ? 'bg-white/95 dark:bg-[#080a0f]/95 backdrop-blur-md border-b border-slate-200 dark:border-zinc-800 shadow-xs dark:shadow-black/50 py-3'
-          : 'bg-[#f8fafc]/90 dark:bg-[#080a0f]/90 backdrop-blur-md border-b border-slate-200/70 dark:border-zinc-800/70 py-4'
-      }`}
-    >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+    <header className="w-full border-b border-slate-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-950/60 backdrop-blur-sm transition-colors">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
         
         {/* Brand Identity */}
-        <a href="#" className="flex items-center gap-2.5 group">
+        <a href="#" className="flex items-center gap-3 group">
           <div className="relative">
             <img
               src="/avatar.png"
               alt={personalInfo.name}
-              className="w-9 h-9 rounded-full object-cover border border-slate-300 dark:border-zinc-700 group-hover:scale-105 transition-transform"
+              className="w-10 h-10 rounded-full object-cover border border-slate-300 dark:border-zinc-700 group-hover:scale-105 transition-transform"
               onError={(e) => {
                 e.target.style.display = 'none';
               }}
             />
-            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-[#080a0f]" />
+            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-zinc-900" />
           </div>
           
           <div className="flex flex-col">
-            <span className="text-sm font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-red-500 transition-colors">
+            <span className="text-sm font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-red-500 transition-colors">
               {personalInfo.name}
             </span>
-            <span className="text-[10px] text-slate-500 dark:text-zinc-400 font-mono">
-              Gurugram • {time || 'IST'}
+            <span className="text-[11px] text-slate-500 dark:text-zinc-400 font-mono">
+              Gurugram, IN • {time || 'IST'}
             </span>
           </div>
         </a>
 
         {/* Desktop Nav Items */}
-        <nav className="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-zinc-900/90 p-1 rounded-full border border-slate-200 dark:border-zinc-800 text-xs">
+        <nav className="hidden md:flex items-center gap-6 text-xs font-mono font-medium">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="px-3.5 py-1.5 rounded-full text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-zinc-800 transition-all font-medium"
+              className="text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white transition-colors"
             >
               {link.name}
             </a>
@@ -88,7 +74,7 @@ export default function Navbar({ onOpenResume, isDark, toggleTheme }) {
         </nav>
 
         {/* Action CTAs & Theme Switcher */}
-        <div className="hidden sm:flex items-center gap-2">
+        <div className="hidden sm:flex items-center gap-2.5">
           
           {/* Theme Toggle Button */}
           <button
@@ -116,7 +102,7 @@ export default function Navbar({ onOpenResume, isDark, toggleTheme }) {
           {/* Contact Button */}
           <a
             href="#contact"
-            className="inline-flex items-center gap-1 px-4 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white shadow-xs shadow-red-500/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            className="inline-flex items-center gap-1 px-4 py-1.5 rounded-full text-xs font-bold bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-zinc-100 text-white dark:text-slate-950 shadow-xs transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
             <span>Connect</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -147,7 +133,7 @@ export default function Navbar({ onOpenResume, isDark, toggleTheme }) {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="sm:hidden px-4 pt-3 pb-4 border-t border-slate-200 dark:border-zinc-800 mt-2 space-y-1 text-sm font-medium bg-white dark:bg-[#080a0f]">
+        <div className="sm:hidden px-4 pt-2 pb-4 border-t border-slate-200 dark:border-zinc-800 space-y-1 text-sm font-medium bg-white dark:bg-zinc-950">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -171,7 +157,7 @@ export default function Navbar({ onOpenResume, isDark, toggleTheme }) {
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="flex-1 py-2 text-center rounded-xl bg-gradient-to-r from-red-500 to-rose-600 text-white font-bold text-xs"
+              className="flex-1 py-2 text-center rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-950 font-bold text-xs"
             >
               Get In Touch
             </a>
