@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "vite build && git -C dist init && git -C dist add -A && git -C dist commit -m \"deploy: live production build\" && git -C dist push -f https://github.com/ayushman1729/portfolio.git main:gh-pages",
     "lint": "oxlint",
     "preview": "vite preview"
   },
