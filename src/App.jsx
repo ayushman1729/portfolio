@@ -17,7 +17,6 @@ export default function App() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Clear any previous dark preference to ensure light mode renders cleanly
     if (isDark) {
       document.documentElement.classList.add('dark');
     } else {
@@ -32,7 +31,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#f8fafc] dark:bg-[#080a0f] text-slate-800 dark:text-slate-100 flex flex-col font-['Plus_Jakarta_Sans',sans-serif] selection:bg-red-500 selection:text-white transition-colors duration-200">
       
-      {/* Floating Header */}
+      {/* Seamless Sticky Header */}
       <Navbar
         onOpenResume={() => setIsResumeOpen(true)}
         isDark={isDark}
@@ -40,7 +39,7 @@ export default function App() {
       />
       
       {/* Main Content */}
-      <main className="flex-1 pt-24 sm:pt-28 space-y-12 sm:space-y-16">
+      <main className="flex-1 pt-8 sm:pt-12 space-y-12 sm:space-y-16">
         <Hero
           onOpenResume={() => setIsResumeOpen(true)}
           isDark={isDark}
