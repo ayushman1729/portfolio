@@ -91,17 +91,18 @@ export const projects = [
     featured: true
   },
   {
-    title: "Social Echo — Community Interaction Platform",
-    tagline: "Responsive interaction feed built with modern React component patterns and state management.",
-    category: "Frontend",
-    date: "2025",
+    title: "EchoPulse — In-Browser API Workbench & Telemetry Engine",
+    tagline: "High-performance developer API client & telemetry platform for testing endpoints, measuring latency, and inspecting payloads in real-time.",
+    category: "Full-Stack",
+    date: "2026",
     problem:
-      "Building a snappy social feed with responsive post interactions and clean state isolation.",
+      "Developers needing rapid API debugging often have to switch to heavy desktop tools that lack sharable web links and instant telemetry metrics.",
     solution:
-      "Engineered dynamic post feeds, modal views, and reactive UI interactions using React and Context API.",
-    tech: ["React.js", "JavaScript", "Tailwind CSS", "Context API"],
-    github: "https://github.com/ayushman1729/social-echo",
-    featured: false
+      "Built a browser-based Postman alternative supporting multi-method HTTP requests (GET, POST, PUT, DELETE), header presets, JSON payload syntax highlighting, real-time response timing telemetry, and status breakdown.",
+    tech: ["React.js", "TypeScript", "Tailwind CSS", "RESTful APIs", "Vite", "Vercel CI/CD"],
+    github: "https://github.com/ayushman1729/echopulse",
+    demo: "https://echopulse-nine.vercel.app",
+    featured: true
   },
   {
     title: "Modern E-Commerce Storefront",
