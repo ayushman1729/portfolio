@@ -28,7 +28,7 @@ export const skillsData = {
   backend: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth", "Cloudinary SDK", "Postman API Testing"],
   database: ["MongoDB", "Mongoose"],
   multimedia: ["RTSP Streaming", "FFmpeg Transcoding", "HLS Browser Playback", "CCTV Integration", "Cloudinary Media"],
-  tools: ["Git & GitHub", "VS Code", "Postman", "Thunder Client"]
+  tools: ["Git & GitHub", "Vercel (CI/CD)", "Vite", "VS Code", "Postman", "Thunder Client"]
 };
 
 export const experience = [
@@ -77,16 +77,17 @@ export const projects = [
     featured: true
   },
   {
-    title: "Enterprise React Admin Dashboard",
-    tagline: "Modular management panel with TanStack Query caching, protected routes, and instant search.",
+    title: "PulseAdmin — Enterprise React & Commerce Platform",
+    tagline: "High-performance enterprise admin dashboard with Redux state management, live commerce metrics, and CI/CD automation.",
     category: "Frontend",
-    date: "Jul 2026",
+    date: "2026",
     problem:
-      "Large catalog dashboards suffer from sluggish table re-renders, redundant network calls, and clunky navigation across paginated records.",
+      "Enterprise commerce back-offices suffer from sluggish catalog rendering, disjointed state synchronization across modules, and difficult live deployments.",
     solution:
-      "Implemented TanStack Query for server-state caching, data deduplication, and background synchronization. Structured protected dynamic routes, product management, search filtering, and loading skeleton states.",
-    tech: ["React.js", "React Router", "TanStack Query", "Axios", "Tailwind CSS"],
+      "Architected a responsive Crimson & Slate dashboard with Redux Toolkit for unified cart & catalog state, React Router client-side routing with 404 fallback handling, 1-click demo recruiter authentication, and automated GitHub-to-Vercel CI/CD pipeline.",
+    tech: ["React.js", "Redux Toolkit", "React Router", "Vite", "REST APIs", "Vercel CI/CD", "Bootstrap/CSS3"],
     github: "https://github.com/ayushman1729/react-admin-dashboard",
+    demo: "https://react-admin-dashboard-iota-rosy.vercel.app",
     featured: true
   },
   {

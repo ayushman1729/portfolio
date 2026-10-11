@@ -133,20 +133,35 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-zinc-900 hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-900 dark:text-zinc-200 border border-slate-200 dark:border-zinc-700/80 hover:border-red-500/50 transition-colors shadow-xs"
-                    >
-                      <GithubIcon className="w-4 h-4 text-slate-500 dark:text-zinc-400" />
-                      <span>View Code</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
-                    </a>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono font-bold bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white transition-all shadow-xs"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                          <span>Live Demo</span>
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
+                      )}
+
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-zinc-900 hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-900 dark:text-zinc-200 border border-slate-200 dark:border-zinc-700/80 hover:border-red-500/50 transition-colors shadow-xs"
+                      >
+                        <GithubIcon className="w-4 h-4 text-slate-500 dark:text-zinc-400" />
+                        <span>Code</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
+                      </a>
+                    </div>
 
                     <span className="text-[11px] font-mono text-slate-400 dark:text-zinc-500">
-                      // GITHUB VERIFIED
+                      {project.demo ? '// VERIFIED LIVE' : '// GITHUB VERIFIED'}
                     </span>
                   </div>
                 </div>
