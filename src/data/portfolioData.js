@@ -62,7 +62,7 @@ export const projects = [
       "Engineered an autonomous AI agent leveraging LLM Function Calling (Gemini API) to execute verified backend actions (order tracking, conditional cancellations, policy lookup). Implemented sentiment-triggered escalation creating priority tickets in SQLite, coupled with an interactive full-stack inspection dashboard with live DB sync and execution logs.",
     tech: ["Python", "FastAPI", "SQLite", "Gemini API", "LLM Tool Calling", "REST APIs", "Vercel"],
     github: "https://github.com/ayushman1729/ai-support-agent",
-    demo: "https://ai-support-agent.vercel.app",
+    demo: "https://ai-support-agent-6rbb.vercel.app",
     featured: true
   },
   {
