@@ -36,7 +36,7 @@ export default function About() {
             </p>
             <p className="text-slate-400">
               My hands-on experience spans developing enterprise web applications using 
-              <strong className="text-slate-200"> React.js, Next.js, Node.js, and MongoDB</strong>. At GVD, I have spearheaded the migration of legacy web systems into modular Next.js platforms, engineered 8+ RESTful APIs, and built low-latency video streaming pipelines connecting RTSP CCTV feeds with browser HLS video players.
+              <strong className="text-slate-200"> Next.js 15, React.js, TypeScript, Node.js, and PostgreSQL</strong>. In addition to migrating legacy web systems into modular Next.js platforms at GVD, I architect high-concurrency backend services and build autonomous AI agents using <strong className="text-slate-200">LLM Tool Calling (Gemini API)</strong>.
             </p>
             <p className="text-slate-400">
               I believe in clean, maintainable architecture, structured state management with TanStack Query, and designing solutions that directly solve business disputes and optimize user flows.

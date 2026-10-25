@@ -66,7 +66,7 @@ export default function Hero({ onOpenResume, isDark }) {
           <div className="lg:col-span-7 space-y-5">
             <div>
               <span className="text-xs font-mono font-bold text-red-600 dark:text-red-400 tracking-wider uppercase mb-1.5 block">
-                FULL-STACK SOFTWARE ENGINEER
+                FULL-STACK DEVELOPER & AI INTEGRATION
               </span>
               <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.06]">
                 Ayushman Singh
@@ -83,7 +83,7 @@ export default function Hero({ onOpenResume, isDark }) {
               >
                 Genius Vision Digital (GVD)
               </a>
-              . I engineer modern web systems with <strong className="text-slate-900 dark:text-zinc-200 font-semibold">React</strong> & <strong className="text-slate-900 dark:text-zinc-200 font-semibold">Next.js</strong>, design reliable REST APIs, and build low-latency video streaming pipelines with <strong className="text-slate-900 dark:text-zinc-200 font-semibold">RTSP & FFmpeg (HLS)</strong>.
+              . I engineer modern web systems with <strong className="text-slate-900 dark:text-zinc-200 font-semibold">Next.js & React</strong>, design resilient backend architectures with <strong className="text-slate-900 dark:text-zinc-200 font-semibold">Node.js, TypeScript & PostgreSQL</strong>, and build <strong className="text-slate-900 dark:text-zinc-200 font-semibold">Autonomous AI Agents</strong> with <strong className="text-slate-900 dark:text-zinc-200 font-semibold">LLM Tool Calling</strong>.
             </p>
 
             {/* CTAs */}
@@ -228,7 +228,7 @@ export default function Hero({ onOpenResume, isDark }) {
                   Core Technologies:
                 </span>
                 <div className="flex flex-wrap gap-1.5">
-                  {['React.js', 'Next.js', 'Node.js', 'MongoDB', 'RTSP/FFmpeg', 'Cloudinary', 'Java DSA'].map((tech) => (
+                  {['Next.js 15', 'React.js', 'Node.js', 'TypeScript', 'PostgreSQL', 'FastAPI', 'Gemini / AI Tools', 'Prisma', 'MongoDB'].map((tech) => (
                     <span
                       key={tech}
                       className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-slate-100 dark:bg-zinc-900 text-slate-800 dark:text-zinc-300 border border-slate-200 dark:border-zinc-800"
