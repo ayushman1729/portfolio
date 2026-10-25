@@ -6,9 +6,10 @@ export default function Skills() {
     { title: "Languages", items: skillsData.languages },
     { title: "Frontend Engineering", items: skillsData.frontend },
     { title: "Backend & REST APIs", items: skillsData.backend },
-    { title: "Video & Media Protocols", items: skillsData.multimedia },
+    { title: "AI & Autonomous Agents", items: skillsData.ai },
     { title: "Database Systems", items: skillsData.database },
-    { title: "Testing & DevOps Tools", items: skillsData.tools }
+    { title: "Testing & DevOps Tools", items: skillsData.tools },
+    { title: "Video & Media Protocols", items: skillsData.multimedia }
   ];
 
   return (

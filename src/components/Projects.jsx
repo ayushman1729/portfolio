@@ -8,7 +8,7 @@ export default function Projects() {
   const [filter, setFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = ['All', 'Full-Stack', 'Frontend'];
+  const categories = ['All', 'AI / GenAI', 'Full-Stack', 'Frontend'];
 
   const filtered = projects.filter((p) => {
     const matchesFilter = filter === 'All' || p.category.includes(filter);

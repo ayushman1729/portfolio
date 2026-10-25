@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Ayushman Singh",
-  role: "Full-Stack Software Engineer",
-  tagline: "Specializing in React.js, Next.js, Node.js, and Real-Time RTSP/FFmpeg Video Streaming.",
+  role: "Full-Stack Developer & AI Software Engineer",
+  tagline: "Specializing in Next.js, React.js, Node.js, PostgreSQL, and Autonomous AI Agent Integration.",
   location: "Gurugram, Haryana, India",
   timezone: "IST (UTC+5:30)",
   email: "ayushman7310@gmail.com",
@@ -23,10 +23,11 @@ export const personalInfo = {
 };
 
 export const skillsData = {
-  languages: ["JavaScript (ES6+)", "Java", "Python", "HTML5", "CSS3 / Tailwind"],
-  frontend: ["React.js", "Next.js", "TanStack Query", "Redux Toolkit", "React Router", "Tailwind CSS"],
-  backend: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth", "Cloudinary SDK", "Postman API Testing"],
-  database: ["MongoDB", "Mongoose"],
+  languages: ["TypeScript", "JavaScript (ES6+)", "Java", "Python", "SQL", "HTML5", "CSS3 / Tailwind"],
+  frontend: ["Next.js 15 (App Router)", "React.js", "Tailwind CSS", "TanStack Query", "Zustand", "Redux Toolkit", "React Router v7", "Chart.js"],
+  backend: ["Node.js", "FastAPI", "Express.js", "RESTful APIs", "Row-Level Locking", "Database Transactions", "JWT Auth", "Postman"],
+  ai: ["LLM Function Calling (Gemini API)", "Tool-Based Agent Design", "Prompt Engineering", "Structured Outputs"],
+  database: ["PostgreSQL (Neon Serverless)", "Prisma 6 ORM", "SQLite", "MongoDB", "Mongoose"],
   multimedia: ["RTSP Streaming", "FFmpeg Transcoding", "HLS Browser Playback", "CCTV Integration", "Cloudinary Media"],
   tools: ["Git & GitHub", "Vercel (CI/CD)", "Vite", "VS Code", "Postman", "Thunder Client"]
 };
@@ -50,6 +51,34 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    title: "SwiftCart — Autonomous AI Support & Tool Calling System",
+    tagline: "Autonomous customer service agent using LLM Function Calling to perform verified SQLite database operations and escalation.",
+    category: "AI / GenAI",
+    date: "Oct 2026",
+    problem:
+      "Customer support teams face thousands of repetitive order inquiries and cancellation requests, while generic chatbots frequently hallucinate and lack the ability to safely query or modify internal databases.",
+    solution:
+      "Engineered an autonomous AI agent leveraging LLM Function Calling (Gemini API) to execute verified backend actions (order tracking, conditional cancellations, policy lookup). Implemented sentiment-triggered escalation creating priority tickets in SQLite, coupled with an interactive full-stack inspection dashboard with live DB sync and execution logs.",
+    tech: ["Python", "FastAPI", "SQLite", "Gemini API", "LLM Tool Calling", "REST APIs", "Vercel"],
+    github: "https://github.com/ayushman1729/ai-support-agent",
+    demo: "https://ai-support-agent.vercel.app",
+    featured: true
+  },
+  {
+    title: "TicketRush — High-Concurrency Event Ticketing Platform",
+    tagline: "Flash-sale ticketing engine modeled after Tatkal/BookMyShow with atomic concurrency locking and zero double-bookings.",
+    category: "Full-Stack",
+    date: "Oct 2026",
+    problem:
+      "High-traffic ticket drops create severe race conditions and database deadlocks when 50+ concurrent buyers hit checkout on the exact same seat at the same millisecond.",
+    solution:
+      "Engineered a full-stack ticketing engine with PostgreSQL row-level locking (transactions) to achieve zero double-bookings with 409 Conflict rejection. Implemented a 7-minute TTL checkout hold engine with automated background sweepers to prevent seat hoarding, paired with an interactive stadium seat grid with tiered pricing.",
+    tech: ["Next.js 15", "TypeScript", "Prisma 6", "Neon Cloud PostgreSQL", "Tailwind CSS", "Vercel"],
+    github: "https://github.com/ayushman1729/TicketRush",
+    demo: "https://ticketrush.vercel.app",
+    featured: true
+  },
   {
     title: "E-Commerce Packing Audit & CCTV Playback System",
     tagline: "Resolving e-commerce return disputes by automatically linking Start/Close packaging scans with CCTV surveillance footage.",
