@@ -74,7 +74,7 @@ export default function Hero({ onOpenResume, isDark }) {
             </div>
 
             <p className="text-base sm:text-lg text-slate-600 dark:text-zinc-400 leading-relaxed font-normal">
-              Software Engineer Intern at{' '}
+              Software Developer at{' '}
               <a
                 href={personalInfo.company.url}
                 target="_blank"
@@ -189,7 +189,7 @@ export default function Hero({ onOpenResume, isDark }) {
                       {personalInfo.name}
                     </h3>
                     <p className="text-xs text-slate-500 dark:text-zinc-400 font-mono">
-                      SWE Intern @ GVD
+                      Software Developer @ GVD
                     </p>
                   </div>
                 </div>

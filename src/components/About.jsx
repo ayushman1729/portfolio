@@ -32,7 +32,7 @@ export default function About() {
           {/* Left Column: Narrative */}
           <div className="lg:col-span-7 space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed">
             <p>
-              I am a dedicated <strong className="text-white font-semibold">Full-Stack Software Engineer</strong> based in Gurugram, India. Currently working as an intern at <strong className="text-cyan-400 font-semibold">Genius Vision Digital (GVD)</strong>, I specialize in engineering responsive modern frontends and resilient backend architectures.
+              I am a dedicated <strong className="text-white font-semibold">Full-Stack Software Engineer</strong> based in Gurugram, India. Currently working as a <strong className="text-cyan-400 font-semibold">Software Developer</strong> at <strong className="text-cyan-400 font-semibold">Genius Vision Digital (GVD)</strong>, I specialize in engineering responsive modern frontends and resilient backend architectures.
             </p>
             <p className="text-slate-400">
               My hands-on experience spans developing enterprise web applications using 
@@ -109,7 +109,7 @@ export default function About() {
                     Current Engagement
                   </span>
                   <h3 className="text-lg font-bold text-white">
-                    Software Engineer Intern
+                    Software Developer
                   </h3>
                 </div>
               </div>

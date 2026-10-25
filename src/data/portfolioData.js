@@ -10,7 +10,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/ayushman1729",
   company: {
     name: "Genius Vision Digital (GVD)",
-    role: "Software Engineer Intern",
+    role: "Software Developer",
     period: "Jul 2026 – Present",
     location: "Gurugram, Haryana"
   },
@@ -34,7 +34,7 @@ export const skillsData = {
 
 export const experience = [
   {
-    role: "Software Engineer Intern",
+    role: "Software Developer",
     company: "Genius Vision Digital (GVD)",
     period: "Jul 2026 – Present",
     location: "Gurugram, Haryana",

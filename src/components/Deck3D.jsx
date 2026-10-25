@@ -49,7 +49,7 @@ export default function Deck3D() {
     {
       id: 2,
       title: "AYUSHMAN SINGH",
-      subtitle: "Software Engineer Intern @ GVD",
+      subtitle: "Software Developer @ GVD",
       category: "CREATOR // ENGINEER",
       badge: "GURUGRAM, IN",
       bg: "bg-[#12141c] border-zinc-600 text-white shadow-2xl",
