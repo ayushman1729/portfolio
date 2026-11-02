@@ -54,8 +54,6 @@ export default function Hero({ onOpenResume, isDark }) {
           <div className="inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-zinc-400 font-mono">
             <span>•</span>
             <span>GURUGRAM, HARYANA</span>
-            <span>•</span>
-            <span className="text-slate-400 dark:text-zinc-500">BBD UNIVERSITY</span>
           </div>
         </div>
 

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Video, Home, ShieldCheck, Terminal, Sparkles, Layers, Bot } from 'lucide-react';
+import AiToolsHubSimulator from './AiToolsHubSimulator';
 import AiSupportSimulator from './AiSupportSimulator';
 import CctvSimulator from './CctvSimulator';
 import RentProofDemo from './RentProofDemo';
 
 export default function SystemDemos({ isDark }) {
-  const [activeDemo, setActiveDemo] = useState('ai'); // 'ai' | 'cctv' | 'rentproof'
+  const [activeDemo, setActiveDemo] = useState('aitools'); // 'aitools' | 'ai' | 'cctv' | 'rentproof'
 
   return (
     <section id="demos" className="py-8">
@@ -37,6 +38,18 @@ export default function SystemDemos({ isDark }) {
             {/* Interactive Demo Switcher Tabs */}
             <div className="flex items-center flex-wrap gap-1.5 p-1 rounded-2xl bg-slate-200/70 dark:bg-zinc-950 border border-slate-300/60 dark:border-zinc-800 text-xs font-mono">
               <button
+                onClick={() => setActiveDemo('aitools')}
+                className={`px-3.5 py-1.5 rounded-xl flex items-center gap-2 transition-all font-semibold ${
+                  activeDemo === 'aitools'
+                    ? 'bg-purple-600 text-white shadow-sm shadow-purple-600/25 scale-[1.02]'
+                    : 'text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white'
+                }`}
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>1. AI Tools Hub</span>
+              </button>
+
+              <button
                 onClick={() => setActiveDemo('ai')}
                 className={`px-3.5 py-1.5 rounded-xl flex items-center gap-2 transition-all font-semibold ${
                   activeDemo === 'ai'
@@ -45,7 +58,7 @@ export default function SystemDemos({ isDark }) {
                 }`}
               >
                 <Bot className="w-3.5 h-3.5" />
-                <span>1. SwiftCart AI Agent</span>
+                <span>2. SwiftCart AI Agent</span>
               </button>
 
               <button
@@ -57,7 +70,7 @@ export default function SystemDemos({ isDark }) {
                 }`}
               >
                 <Video className="w-3.5 h-3.5" />
-                <span>2. E-Commerce CCTV Audit</span>
+                <span>3. E-Commerce CCTV Audit</span>
               </button>
 
               <button
@@ -69,7 +82,7 @@ export default function SystemDemos({ isDark }) {
                 }`}
               >
                 <Home className="w-3.5 h-3.5" />
-                <span>3. RentProof Inspection</span>
+                <span>4. RentProof Inspection</span>
               </button>
             </div>
 
@@ -79,14 +92,18 @@ export default function SystemDemos({ isDark }) {
           <div className="px-6 py-4 bg-slate-50/50 dark:bg-zinc-900/40 border-b border-slate-200/60 dark:border-zinc-800/80 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
             <div>
               <span className="font-bold text-slate-900 dark:text-white block sm:inline mr-2">
-                {activeDemo === 'ai'
+                {activeDemo === 'aitools'
+                  ? 'AI Writing & Semantic NLP Pipeline (Next.js 16)'
+                  : activeDemo === 'ai'
                   ? 'LLM Tool Calling & Database Action Engine'
                   : activeDemo === 'cctv'
                   ? 'Surveillance & Barcode Linkage Pipeline (GVD)'
                   : 'Property Dispute & Move-In/Out Evidence Workflow'}
               </span>
               <span className="text-slate-500 dark:text-zinc-400">
-                {activeDemo === 'ai'
+                {activeDemo === 'aitools'
+                  ? 'Live multi-tone text paraphraser, contextual synonym replacement, and Gemini 3.8 Flash API integration.'
+                  : activeDemo === 'ai'
                   ? 'Autonomous agent invoking parameterized backend functions to track orders, cancel in SQLite, and escalate tickets.'
                   : activeDemo === 'cctv'
                   ? 'Simulate start-scan & close-scan packaging events with FFmpeg video snippet extraction.'
@@ -105,7 +122,9 @@ export default function SystemDemos({ isDark }) {
 
           {/* Active Demo Render Area */}
           <div className="p-4 sm:p-6 bg-slate-100/50 dark:bg-[#07090e]/80">
-            {activeDemo === 'ai' ? (
+            {activeDemo === 'aitools' ? (
+              <AiToolsHubSimulator isDark={isDark} />
+            ) : activeDemo === 'ai' ? (
               <AiSupportSimulator isDark={isDark} />
             ) : activeDemo === 'cctv' ? (
               <CctvSimulator isDark={isDark} />
