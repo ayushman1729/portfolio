@@ -47,13 +47,15 @@ export default function Hero({ onOpenResume, isDark }) {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
             <span className="text-xs font-semibold text-slate-800 dark:text-zinc-200">
-              Open to Software Engineering Roles (2026 Batch)
+              Architecting Production AI & Scalable Full-Stack Systems
             </span>
           </div>
 
           <div className="inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-zinc-400 font-mono">
             <span>•</span>
             <span>GURUGRAM, HARYANA</span>
+            <span>•</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-medium tracking-wide">ACTIVE IN PRODUCTION</span>
           </div>
         </div>
 
