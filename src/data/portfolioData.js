@@ -52,6 +52,20 @@ export const experience = [
 
 export const projects = [
   {
+    title: "AI Tools Hub — Free Writing & Productivity Suite",
+    tagline: "Minimalist, production-ready AI writing suite featuring Text Rewriter, Paragraph Generator, Hashtag Generator, and Email Writer.",
+    category: "AI / Full-Stack",
+    date: "Nov 2026",
+    problem:
+      "Most AI writing platforms are cluttered with paywalls, forced subscriptions, heavy ads, and sluggish interfaces that disrupt author and developer productivity.",
+    solution:
+      "Architected a high-performance Next.js 16 (Turbopack) web application with Google Gemini 3.8 Flash API integration paired with a contextual semantic NLP engine. Features include deep multi-tone paraphrasing (Formal, Casual, Professional, Academic), dynamic word-length paragraph synthesis, interactive social hashtag chips, and structured email drafting with zero login requirements.",
+    tech: ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Google Gemini API", "NLP Engine", "Turbopack", "Vercel"],
+    github: "https://github.com/ayushman1729/ai-tools-hub",
+    demo: "https://ai-tools-hub-ten-nu.vercel.app",
+    featured: true
+  },
+  {
     title: "SwiftCart — Autonomous AI Support & Tool Calling System",
     tagline: "Autonomous customer service agent using LLM Function Calling to perform verified SQLite database operations and escalation.",
     category: "AI / GenAI",
